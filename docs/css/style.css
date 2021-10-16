@@ -1,0 +1,54 @@
+@charset 'utf-8';
+html, body {
+	font-family: -apple-system, sans-serif;
+	word-break: keep-all;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	html.dark {
+		filter: invert(100%) hue-rotate(180deg) contrast(90%);
+	}
+	html.dark img {
+		filter: invert(100%) hue-rotate(180deg);
+	}
+}
+
+pre code {
+	font-size: 14px;
+}
+
+pre, code {
+	border-radius: 4px;
+}
+
+pre code, pre, code, kbd, samp {
+	font-family: 'Consolas', monospace;
+}
+
+div[role=main] a {
+	text-decoration: underline;
+}
+
+div[role=main] a:hover {
+	text-decoration-thickness: 0.1em;
+}
+
+a {
+	color: midnightblue;
+}
+
+a:hover {
+	color: navy;
+}
+
+div[role=main] strong,
+div[role=main] em {
+	color: black;
+}
+
+div[role=main] strong > em {
+	background-color: Thistle;
+	color: black;
+	border-radius: .2em;
+	padding: .2em;
+}

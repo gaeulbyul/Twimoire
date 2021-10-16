@@ -1,0 +1,30 @@
+site_name: 'Twimoire'
+site_description: '트위터 확장기능 및 유저스크립트 개발을 위한 팁'
+site_author: '가을별(Gaeulbyul)'
+nav:
+  - Home: 'index.md'
+  - Pages:
+    - 'React': 'react.md'
+    - 'Redux store': 'redux-store.md'
+    - 'Feature switch': 'feature-switch.md'
+    - 'Hashflag': 'hashflag.md'
+    - 'Tips': 'tips.md'
+theme:
+  name: 'mkdocs'
+  highlightjs: true
+  hljs_style: 'night-owl'
+  nav_style: 'dark'
+  navigation_depth: 2
+dev_addr: '127.0.0.1:8080'
+markdown_extensions:
+  - admonition
+  - fenced_code
+  - footnotes
+  # - sane_lists
+  - smarty
+  - tables
+  - wikilinks
+extra_css:
+  - '/css/style.css'
+extra_javascript:
+  - '/js/script.js'
