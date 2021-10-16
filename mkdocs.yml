@@ -1,6 +1,10 @@
 site_name: 'Twimoire'
 site_description: '트위터 확장기능 및 유저스크립트 개발을 위한 팁'
 site_author: '가을별(Gaeulbyul)'
+repo_url: 'https://github.com/gaeulbyul/Twimoire'
+# edit_uri: 기본 브랜치명이 master라 직접 main을 지정해줘야 함.
+# https://github.com/mkdocs/mkdocs/issues/2416
+edit_uri: './edit/main/docs'
 nav:
   - Home: 'index.md'
   - Pages:
