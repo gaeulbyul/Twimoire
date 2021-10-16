@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="가을별(Gaeulbyul)">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Tips - Twimoire</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/night-owl.min.css">
+        <link href="/css/style.css" rel="stylesheet">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="..">Twimoire</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../react/" class="dropdown-item">React</a>
+</li>
+                                    
+<li>
+    <a href="../redux-store/" class="dropdown-item">Redux store</a>
+</li>
+                                    
+<li>
+    <a href="../feature-switch/" class="dropdown-item">Feature switch</a>
+</li>
+                                    
+<li>
+    <a href="../hashflag/" class="dropdown-item">Hashflag</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Tips</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../hashflag/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#tips" class="nav-link">Tips</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#class" class="nav-link">class가 랜덤 문자열이에요</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#routes" class="nav-link">트위터 routes 접근</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#gryphon" class="nav-link">트윗덱 신버전 (Gryphon) 프리뷰 진입</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#id" class="nav-link">유저 ID 링크</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#s" class="nav-link">트윗링크에서 끝에 붙는 s 파라미터 의미</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">트위터 고급검색 구문</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">구버전 트위터 화면</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="tips">Tips</h1>
+<p>미분류 팁부터 마땅히 써먹을만한 데가 생각나지 않는(&hellip;) 잡지식까지.</p>
+<h2 id="class">class가 랜덤 문자열이에요</h2>
+<p>트위터에선 거의 모든 class가 다음과 같이 무작위로 되어있다.</p>
+<pre><code class="language-html">&lt;div class=&quot;css-1dbjc4n r-1awozwy r-18u37iz r-1h3ijdo r-1777fci r-1jgb5lz r-1ye8kvj r-ymttw5 r-13qz1uu&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<p>이는 <a href="https://css-tricks.com/css-modules-part-1-need/">CSS Modules</a> 기법으로 class가 서로 겹치지 않도록 빌드과정에서 무작위로 생성한 것. 다만 부작용(?)으로 확장기능이나 유저스크립트를 만드는 입장에선 웹페이지를 접근하기 난감한 경우가 생길 수 있으며, 주석이라도 안 남기면 뭘 의도한 건지도 알기 어렵다. 내가 만든 확장기능(특히, 미러블락)의 경우 이렇게 생성한 class 사용을 최대한 피하는 편인데, 다행히 트위터에선 class말고 그나마 의미가 있는 속성(<code>data-testid</code> 속성이나 <code>aria-*</code>등 접근성 관련 속성, <code>role</code> 등)이 있다.</p>
+<ul>
+<li>트윗: <code>article[data-testid=tweet]</code></li>
+<li>리트윗 버튼: <code>div[role=button][data-testid=retweet]</code></li>
+<li>(팔로워 목록 등에서) 유저: <code>div[data-testid=UserCell]</code></li>
+</ul>
+<p>등등&hellip;</p>
+<h2 id="routes">트위터 routes 접근</h2>
+<p><a href="../redux-store/">Redux store</a> 접근하는 방법과 비슷한데, 트위터 웹에서 정의된 routes를 보는 방법도 있다.</p>
+<pre><code class="language-javascript">document.getElementById('react-root')
+._reactRootContainer._internalRoot.current
+.child.child.child.child.child.child.child
+.pendingProps.routes.props.children
+</code></pre>
+<h2 id="gryphon">트윗덱 신버전 (Gryphon) 프리뷰 진입</h2>
+<p>쿠키값을 통해 <code>tweetdeck_version=beta</code>로 설정한 후 새로고침한다.</p>
+<pre><code class="language-javascript">document.cookie = `tweetdeck_version=beta;path=/;domain=.twitter.com;max-age=15768000;secure;samesite`
+</code></pre>
+<p>출처: <a href="https://twitter.com/Basix1120/status/1417520044725071878">@Basix1120님의 트윗</a></p>
+<h3 id="console">트윗덱 console 복구</h3>
+<p><img alt="MSEdge 개발자도구 콘솔 스크린샷. console.log('what')을 입력한 모습. 출력된 메시지 옆에 &quot;sentry.6f81ac55.js&quot;가 나타난다." src="../images/sentry-console.png" /></p>
+<p>신버전 트윗덱에선 각종 Console API(<code>console.log</code>, <code>console.warn</code> 등)를 <a href="https://sentry.io/">Sentry</a>가 수정했더라. 아주 불편한 건 아니지만 콘솔 호출을 원래대로 되돌리려면 <code>__sentry_original__</code>에 접근하여 바꾸면 된다.</p>
+<pre><code class="language-javascript">function restoreConsole() {
+  const methods = ['debug', 'info', 'warn', 'error', 'log', 'assert']
+  methods.forEach(method =&gt; {
+    if ('__sentry_original__' in console[method]) {
+      console[method] = console[method].__sentry_original__
+    }
+  })
+}
+</code></pre>
+<h2 id="id">유저 ID 링크</h2>
+<p>트위터 유저의 ID만 알고 로그인네임이나 닉네임 등을 모르는 경우, <code>https://twitter.com/intent/user?user_id=유저ID</code>를 입력하면 해당하는 유저의 프로필이 열린다.</p>
+<p>(예: <a href="https://twitter.com/intent/user?user_id=2594273106">https://twitter.com/intent/user?user_id=2594273106</a> =&gt; <a href="https://twitter.com/gaeulbyul">가을별</a>의 트위터 프로필)</p>
+<h2 id="s">트윗링크에서 끝에 붙는 s 파라미터 의미</h2>
+<p>트위터를 하면서 링크를 복사하면 원래 트윗주소 끝에 <code>?s=20</code>같은게 붙어있곤 한다. 트위터측에서 공식적으로 밝힌건 아니나 내가 알아낸 정보에 따르면,</p>
+<table>
+<thead>
+<tr>
+<th><code>?s=</code></th>
+<th>OS (m5=웹)</th>
+<th>공유수단</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>android</td>
+<td>sms</td>
+</tr>
+<tr>
+<td>02</td>
+<td>android</td>
+<td>email</td>
+</tr>
+<tr>
+<td>03</td>
+<td>android</td>
+<td>gmail</td>
+</tr>
+<tr>
+<td>04</td>
+<td>android</td>
+<td>facebook</td>
+</tr>
+<tr>
+<td>05</td>
+<td>android</td>
+<td>wechat</td>
+</tr>
+<tr>
+<td>06</td>
+<td>android</td>
+<td>line</td>
+</tr>
+<tr>
+<td>07</td>
+<td>android</td>
+<td>fbmessenger</td>
+</tr>
+<tr>
+<td>08</td>
+<td>android</td>
+<td>whatsapp</td>
+</tr>
+<tr>
+<td>09</td>
+<td>android</td>
+<td>other</td>
+</tr>
+<tr>
+<td>10</td>
+<td>ios</td>
+<td>sms</td>
+</tr>
+<tr>
+<td>11</td>
+<td>ios</td>
+<td>email</td>
+</tr>
+<tr>
+<td>12</td>
+<td>ios</td>
+<td>other</td>
+</tr>
+<tr>
+<td>13</td>
+<td>android</td>
+<td>download</td>
+</tr>
+<tr>
+<td>14</td>
+<td>ios</td>
+<td>download</td>
+</tr>
+<tr>
+<td>15</td>
+<td>android</td>
+<td>hangouts</td>
+</tr>
+<tr>
+<td>16</td>
+<td>android</td>
+<td>twitterdm</td>
+</tr>
+<tr>
+<td>17</td>
+<td>m5</td>
+<td>email</td>
+</tr>
+<tr>
+<td>18</td>
+<td>m5</td>
+<td>download</td>
+</tr>
+<tr>
+<td>19</td>
+<td>android</td>
+<td>copy</td>
+</tr>
+<tr>
+<td>20</td>
+<td>m5</td>
+<td>copy</td>
+</tr>
+<tr>
+<td>21</td>
+<td>ios</td>
+<td>copy</td>
+</tr>
+<tr>
+<td>22</td>
+<td>ios</td>
+<td>snapchat</td>
+</tr>
+<tr>
+<td>23</td>
+<td>android</td>
+<td>snapchat</td>
+</tr>
+<tr>
+<td>24</td>
+<td>ios</td>
+<td>whatsapp</td>
+</tr>
+<tr>
+<td>25</td>
+<td>ios</td>
+<td>fbmessenger</td>
+</tr>
+<tr>
+<td>26</td>
+<td>ios</td>
+<td>facebook</td>
+</tr>
+<tr>
+<td>27</td>
+<td>ios</td>
+<td>gmail</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://twitter.com/gaeulbyul/status/1352574734102220803">https://twitter.com/gaeulbyul/status/1352574734102220803</a></p>
+<h2 id="_1">트위터 고급검색 구문</h2>
+<p>물론 트위터에서도 <a href="https://twitter.com/search-advanced">고급 검색</a>기능은 제공하나, 모든 구문이 다 들어있진 않더라.
+여기에 정리가 잘 되어있다: <a href="https://github.com/igorbrigadir/twitter-advanced-search/blob/master/README.md">Advanced Search on Twitter</a></p>
+<h2 id="_2">구버전 트위터 화면</h2>
+<p>트위터에서 React/Redux/&hellip; 도입 이전의 UI를 띄울 수 있는 방법이 있다. 바로 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent">User-Agent</a>를 검색 봇(가령, 구글봇 <code>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</code>)으로 바꾸면 이전버전의 트위터 화면이 나타난다. (다만 실제로 사용할 수 있는 정도는 아니고 그냥 UI를 보는 정도의 의미만&hellip;)</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="/js/script.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
