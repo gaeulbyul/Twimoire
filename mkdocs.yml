@@ -25,6 +25,6 @@ markdown_extensions:
   - tables
   - wikilinks
 extra_css:
-  - '/css/style.css'
+  - 'css/style.css'
 extra_javascript:
-  - '/js/script.js'
+  - 'js/script.js'
