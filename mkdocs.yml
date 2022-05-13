@@ -12,6 +12,7 @@ nav:
     - 'Redux store': 'redux-store.md'
     - 'Feature switch': 'feature-switch.md'
     - 'Hashflag': 'hashflag.md'
+    - 'Webpack': 'webpack.md'
     - 'Tips': 'tips.md'
 theme:
   name: 'mkdocs'
